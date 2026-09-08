@@ -1,0 +1,80 @@
+.routineModal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin: 0 1rem 0.75rem;
+    gap: 1rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    overflow: hidden;
+}
+
+.name {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.meta {
+    color: #888;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.dot {
+    color: #555;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.editBtn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.editBtn:hover {
+    color: #bbb;
+}
+
+.startBtn {
+    background-color: #0bcf28;
+    border: none;
+    color: white;
+    font-size: 0.7rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.startBtn:hover {
+    background-color: #09b824;
+    transform: scale(1.08);
+}

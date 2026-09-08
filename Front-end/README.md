@@ -1,16 +1,43 @@
-# React + Vite
+# FitJournal — Front-end
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicação web para gerenciamento de rotinas de treino. Permite cadastrar rotinas, visualizar exercícios e acompanhar o histórico de treinos.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **Vite 8** (JavaScript, sem TypeScript)
+- **CSS Modules** para estilização por componente
+- **oxlint** como linter
 
-## React Compiler
+## Comandos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install      # Instalar dependências
+npm run dev      # Servidor de desenvolvimento (http://localhost:5173)
+npm run build    # Build de produção
+npm run preview  # Prévia do build local
+npm run lint     # Executar oxlint
+```
 
-## Expanding the Oxlint configuration
+## Estrutura
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```
+src/
+├── componentes/
+│   ├── Navbar.jsx      # Barra de navegação + sidebar deslizante
+│   ├── Main.jsx        # Tela principal com lista de rotinas
+│   └── Modal.jsx       # Card de rotina (type=1: exibe nome, exercícios, último treino)
+├── styles/
+│   ├── Navbar.module.css
+│   ├── Main.module.css
+│   └── Modal.module.css
+├── App.jsx
+├── main.jsx
+└── index.css           # Reset CSS global
+```
+
+## Funcionalidades implementadas
+
+- Navbar com logo e sidebar deslizante (abre/fecha com overlay)
+- Lista de rotinas em cards com scroll interno
+- Card de rotina: nome, quantidade de exercícios, data do último treino, botões Editar e Iniciar
+- Botão flutuante (+) fixo no canto inferior direito para adicionar rotinas
