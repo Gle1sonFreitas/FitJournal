@@ -4,6 +4,12 @@ import Styles from '../styles/Navbar.module.css'
 function Navbar(){
   const [sidebar, setSidebar] = useState(false);
 
+  function deslogar() {
+    localStorage.removeItem('userId')
+    localStorage.removeItem('userName')
+    window.location.reload()
+  }
+
   return(
     <>
       <nav>
@@ -32,6 +38,8 @@ function Navbar(){
           <li>Rotinas</li>
           <li>Configurações</li>
         </ul>
+
+        <button className={Styles.logoutBtn} onClick={deslogar}>Sair</button>
       </aside>
     </>
   )

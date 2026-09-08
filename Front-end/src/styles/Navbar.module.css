@@ -110,3 +110,23 @@
 .sidebarNav li:hover {
   color: white;
 }
+
+.logoutBtn {
+  position: absolute;
+  bottom: 2rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: #aaa;
+  font-size: 0.95rem;
+  padding: 0.6rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.logoutBtn:hover {
+  border-color: #e05252;
+  color: #e05252;
+}
