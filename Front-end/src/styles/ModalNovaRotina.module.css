@@ -1,0 +1,195 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 30;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.modal {
+    background-color: #1e1e1e;
+    border-radius: 16px 16px 0 0;
+    padding: 1.5rem 1.25rem;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.modal::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.fecharBtn {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.2s;
+}
+
+.fecharBtn:hover {
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.label {
+    color: #ccc;
+    font-size: 0.85rem;
+}
+
+.input {
+    background-color: #292828;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: white;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+}
+
+.input::placeholder {
+    color: #555;
+}
+
+.input:focus {
+    border-color: #0bcf28;
+}
+
+.exerciciosSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.exercicioRow {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.exercicioFields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+}
+
+.removerBtn {
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0.5rem 0.25rem;
+    margin-top: 0.1rem;
+    transition: color 0.2s;
+    flex-shrink: 0;
+}
+
+.removerBtn:hover:not(:disabled) {
+    color: #e05252;
+}
+
+.removerBtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.adicionarBtn {
+    background: none;
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #888;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.adicionarBtn:hover {
+    border-color: #0bcf28;
+    color: #0bcf28;
+}
+
+.erro {
+    color: #e05252;
+    font-size: 0.82rem;
+    text-align: center;
+}
+
+.acoes {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.cancelarBtn {
+    flex: 1;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    color: #aaa;
+    font-size: 0.95rem;
+    padding: 0.7rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.cancelarBtn:hover {
+    border-color: #aaa;
+    color: white;
+}
+
+.salvarBtn {
+    flex: 1;
+    background-color: #0bcf28;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.7rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.salvarBtn:hover:not(:disabled) {
+    background-color: #09b824;
+}
+
+.salvarBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

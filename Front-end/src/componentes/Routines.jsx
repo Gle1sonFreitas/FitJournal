@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import Style from '../styles/Main.module.css'
 import { ModalRotina } from './Modal.jsx'
+import ModalNovaRotina from './ModalNovaRotina.jsx'
 
 function Routines() {
     const [rotinas, setRotinas] = useState([])
     const [carregando, setCarregando] = useState(true)
     const [erro, setErro] = useState('')
+    const [mostrarModal, setMostrarModal] = useState(false)
 
     useEffect(() => {
         buscarRotinas()
@@ -23,6 +25,12 @@ function Routines() {
         } finally {
             setCarregando(false)
         }
+    }
+
+    function aoSalvarRotina() {
+        setMostrarModal(false)
+        setCarregando(true)
+        buscarRotinas()
     }
 
     return (
@@ -47,7 +55,14 @@ function Routines() {
                 ))}
             </div>
 
-            <button className={Style.AddBtn}>+</button>
+            <button className={Style.AddBtn} onClick={() => setMostrarModal(true)}>+</button>
+
+            {mostrarModal && (
+                <ModalNovaRotina
+                    onFechar={() => setMostrarModal(false)}
+                    onSalvar={aoSalvarRotina}
+                />
+            )}
         </main>
     )
 }
