@@ -45,8 +45,6 @@ public class TreinoRepository {
     }
 
     public void addRotina(AddRotinaDTO rotina){
-        System.out.println(rotina.toString());
-
         String sqlRotina = "INSERT INTO rotinas (id_usuario, nome) VALUES (?, ?) ";
 
         KeyHolder keyHolder = new GeneratedKeyHolder();

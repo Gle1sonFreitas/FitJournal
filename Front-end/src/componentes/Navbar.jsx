@@ -5,8 +5,8 @@ function Navbar(){
   const [sidebar, setSidebar] = useState(false);
 
   function deslogar() {
-    localStorage.removeItem('userId')
-    localStorage.removeItem('userName')
+    sessionStorage.removeItem('userId')
+    sessionStorage.removeItem('userName')
     window.location.reload()
   }
 

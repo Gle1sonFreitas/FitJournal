@@ -12,7 +12,7 @@ function Routines() {
     }, [])
 
     async function buscarRotinas() {
-        const userId = localStorage.getItem('userId')
+        const userId = sessionStorage.getItem('userId')
         try {
             const response = await fetch(`http://localhost:8080/treinos/${userId}`)
             if (!response.ok) throw new Error('Erro ao buscar rotinas.')

@@ -3,7 +3,7 @@ import Routines from './componentes/Routines.jsx'
 import Login from './componentes/Login.jsx'
 
 function App() {
-  const usuarioAutenticado = localStorage.getItem('userId') && localStorage.getItem('userName')
+  const usuarioAutenticado = sessionStorage.getItem('userId') && sessionStorage.getItem('userName')
 
   if (!usuarioAutenticado) {
     return <Login />

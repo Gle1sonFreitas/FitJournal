@@ -34,8 +34,8 @@ function Login() {
 
             const data = await response.json()
 
-            localStorage.setItem('userId', data.id)
-            localStorage.setItem('userName', data.userName)
+            sessionStorage.setItem('userId', data.id)
+            sessionStorage.setItem('userName', data.userName)
 
             window.location.reload()
 
